@@ -160,11 +160,29 @@ class RelationshipGraph(object):
             p.load_relationships(self._data['relationships'])
         self.center = self._data['center']
             
-    def render_relationships_from_center(self, tf=None):
+    def render_relationships_from_center(self, engine='dot'):
         c = Person.get(self.center)
-        d = Digraph(name='polycule-{}'.format(c.id))
+        d = Digraph(name='polycule-{}'.format(c.id), engine=engine)
+        d.node(c.id, ', '.join(c.aliases), _attributes={
+            "shape": "rectangle"
+        })
         for _, p in Person.get_all():
+            if p is c:
+                continue
             d.node(p.id, ', '.join(p.aliases))
         for _, p in Person.get_all():
             p.render_relationships(d)
+            
+        with d.subgraph(name="Key") as k:
+            k.node('KEY_1', "item 1")
+            rels = list([a for _, a in RelationshipType.get_all()])
+            for n, r in enumerate(rels):
+                kname = "KEY_{}".format(n + 2)
+                k.node(kname, "item {}".format(n + 2))
+                k.edge("KEY_1", kname, label="{} - {} [{}]".format(
+                    r.icon,
+                    r.description, 
+                    ("oriented" if r.oriented else "non-oriented"))
+                )
+                
         return d
