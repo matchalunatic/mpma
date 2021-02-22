@@ -1,0 +1,161 @@
+{
+    "center": "matcha",
+    "entities": [
+        {
+            "id": "matcha",
+            "aliases": ["Matcha", "Chloé"],
+            "notes": "This is me!"
+        },
+        {
+            "id": "alexendy",
+            "aliases": ["Alex", "Endy", "alexendy"]
+        },
+        {
+            "id": "pwassonne",
+            "aliases": ["Pwassonne"]
+        },
+        {
+            "id": "menditso",
+            "aliases": ["Coline", "Menditso"]
+        },
+        {
+            "id": "hecate",
+            "aliases": ["Hécate"]
+        },
+        {
+            "id": "jean",
+            "aliases": ["Lumieredhiver"]
+        },
+        {
+            "id": "mathilde",
+            "aliases": ["Mathilde"]
+        },
+        {
+            "id": "mayella",
+            "aliases": ["Mayella"]
+        },
+        {
+            "id": "gabrielle",
+            "aliases": ["Gabriel-le"]
+        },
+        {
+            "id": "ka",
+            "aliases": ["Ka"]
+        }
+        
+    ],
+    "relationship_types": [
+        {
+            "id": "loved_one",
+            "icon": "💙",
+            "oriented": false,
+            "description": "Relations amoureuses"
+        },
+        {
+            "id": "metamour",
+            "icon": "💚",
+            "oriented": false,
+            "description": "Metamours"
+        },
+        {
+           "id": "crush",
+           "icon": "💘👀↗️",
+           "oriented": true,
+           "description": "Crush ou amireux"
+        },
+        {
+            "id": "child",
+            "icon": "🧒",
+            "oriented": true,
+            "description": "Enfants"
+        },
+        {
+            "id": "ex_but_still_here",
+            "icon": "💔",
+            "oriented": false,
+            "description": "Exs mais encore dans la vie"
+        }
+    ],
+    "relationships": [
+        {
+            "id_left": "matcha",
+            "id_right": "alexendy",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "alexendy",
+            "relationship_type": "metamour"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "menditso",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "pwassonne",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "hecate",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "pwassonne",
+            "relationship_type": "metamour"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "jean",
+            "relationship_type": "metamour"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "mathilde",
+            "relationship_type": "metamour"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "ka",
+            "relationship_type": "metamour"
+        },
+        {
+            "id_left": "matcha",
+            "id_right": "gabrielle",
+            "relationship_type": "metamour"
+        },
+        {
+            "id_left": "alexendy",
+            "id_right": "jean",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "alexendy",
+            "id_right": "pwassonne",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "menditso",
+            "id_right": "gabrielle",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "pwassonne",
+            "id_right": "ka",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "hecate",
+            "id_right": "mathilde",
+            "relationship_type": "loved_one"
+        },
+        {
+            "id_left": "hecate",
+            "id_right": "mayella",
+            "relationship_type": "loved_one"
+        }
+    ]
+}
